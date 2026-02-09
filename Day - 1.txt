@@ -1,0 +1,55 @@
+1. How Java is different from other programming languages?
+
+The main difference between Java and any other programming language is the unique method by which Java code is executed. Unlike compiled languages such as C++, Java is compiled into bytecode which can run on any device with the Java Virtual Machine (JVM).
+
+2. Explain about public static void main(String[] args) ?
+
+public static void main(String[] args) in Java — the entry point of any standalone Java application.
+
+public:
+
+Meaning: Access modifier — makes the method accessible from anywhere.
+Why needed: The Java Virtual Machine (JVM) must be able to call this method from outside your class, so it must be public.
+
+static:
+
+Meaning: Belongs to the class, not an object.
+Why needed: JVM calls main() without creating an object of the class.
+If it were not static, JVM would need to instantiate the class first.
+
+void:
+
+Meaning: The method does not return any value.
+Why needed: JVM does not expect any return value from main() — it just executes the code inside.
+
+main:
+
+Meaning: The name of the method that JVM looks for as the starting point.
+Why needed: This is the predefined method name recognized by JVM to start program execution.
+
+String[] args
+
+Meaning: An array of String objects that stores command-line arguments.
+Why needed: Allows passing data to the program when it starts.
+
+3. Write a sample program to print following:
+
+
+    * * *
+  * * * * *
+
+public class StarPattern {
+    public static void main(String[] args) {
+        // First line: 3 stars
+        for (int i = 0; i < 3; i++) {
+            System.out.print("* ");
+        }
+        System.out.println(); // Move to next line
+
+        // Second line: 5 stars
+        for (int i = 0; i < 5; i++) {
+            System.out.print("* ");
+        }
+        System.out.println(); // End output with a newline
+    }
+}
