@@ -1,0 +1,50 @@
+1. Get 3 floating numbers from user like for eg a,b,c. Multiply a & b and then divide it by c. Print the result.
+
+public class MultiplyDivide {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get three floating numbers from the user
+        System.out.print("Enter first number (a): ");
+        float a = scanner.nextFloat();
+
+        System.out.print("Enter second number (b): ");
+        float b = scanner.nextFloat();
+
+        System.out.print("Enter third number (c): ");
+        float c = scanner.nextFloat();
+
+        // Check for division by zero
+        if (c == 0) {
+            System.out.println("Error: Division by zero is not allowed.");
+        } else {
+            // Perform the calculation: (a * b) / c
+            float result = (a * b) / c;
+            System.out.println("The result of (a * b) / c is: " + result);
+        }
+
+        scanner.close();
+    }
+}
+
+
+2. Compare 2 numbers using >= and <= operators. Print the result.
+
+public class CompareNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get two numbers from the user
+        System.out.print("Enter first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = scanner.nextInt();
+
+        // Compare using >= and <=
+        System.out.println("Is num1 >= num2? " + (num1 >= num2));
+        System.out.println("Is num1 <= num2? " + (num1 <= num2));
+
+        scanner.close();
+    }
+}
