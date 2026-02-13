@@ -1,0 +1,99 @@
+1. Print numbers in descending order from 10 to 1 using looping statement
+
+public class DescNos {
+
+    public static void main(String[] args) {
+
+        for (int a = 10; a >= 1; a--) {
+
+            System.out.println(a);
+
+        }
+    }
+}
+
+
+
+2. a. - Get the input from user like add,sub,div
+
+
+import java.util.Scanner;
+
+public class OperationExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Get two numbers from user
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+
+        // Get operation choice from user
+        System.out.print("Enter operation (add, sub, mul, div): ");
+        String operation = sc.next();  // reads a word like "add"
+
+        // Conditional statement to perform operation
+        if (operation.equalsIgnoreCase("add")) {
+            System.out.println("Result: " + (num1 + num2));
+        } else if (operation.equalsIgnoreCase("sub")) {
+            System.out.println("Result: " + (num1 - num2));
+        } else if (operation.equalsIgnoreCase("mul")) {
+            System.out.println("Result: " + (num1 * num2));
+        } else if (operation.equalsIgnoreCase("div")) {
+            if (num2 != 0) {
+                System.out.println("Result: " + (num1 / num2));
+            } else {
+                System.out.println("Error: Division by zero!");
+            }
+        } else {
+            System.out.println("Invalid operation entered!");
+        }
+
+        sc.close();
+    }
+}
+
+
+
+2. b. Based on the input perform the mathematical operation using any conditional statement
+
+
+import java.util.Scanner;
+
+public class MathOperation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input two numbers
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+
+        // Input operation choice
+        System.out.print("Enter operation (+, -, *, /): ");
+        char op = sc.next().charAt(0);
+
+        // Conditional statements to perform operation
+        if (op == '+') {
+            System.out.println("Result: " + (num1 + num2));
+        } else if (op == '-') {
+            System.out.println("Result: " + (num1 - num2));
+        } else if (op == '*') {
+            System.out.println("Result: " + (num1 * num2));
+        } else if (op == '/') {
+            if (num2 != 0) {
+                System.out.println("Result: " + (num1 / num2));
+            } else {
+                System.out.println("Error: Division by zero!");
+            }
+        } else {
+            System.out.println("Invalid operation!");
+        }
+
+        sc.close();
+    }
+}
