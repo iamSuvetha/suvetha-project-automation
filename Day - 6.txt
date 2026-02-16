@@ -1,0 +1,131 @@
+1. Explain about class and objects
+
+Class
+=====
+
+- A class is like a blueprint or template.
+- It defines what data (variables) and actions (methods) an object will have.
+
+Example: A Car class might have data like color and speed, and actions like drive() or brake().
+
+
+
+class Car {
+ 
+   String color;   // data
+    int speed;
+
+   public void drive() {  
+
+        System.out.println("Car is driving at " + speed + " km/h");
+
+    }
+}
+
+
+Object
+======
+
+- An object is a real thing created from a class.
+- Each object has its own values for the class’s variables.
+- You can create many objects from one class, each with different data.
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Car car1 = new Car();   // object 1
+
+        car1.color = "Red";
+        car1.speed = 120;
+
+        Car car2 = new Car();   // object 2
+        car2.color = "Blue";
+        car2.speed = 100;
+
+        car1.drive();  // Car is driving at 120 km/h
+        car2.drive();  // Car is driving at 100 km/h
+    }
+}
+
+
+
+2. Create a program as  follows:
+
+      Parent Class: Person who can walk,run,sit and has attributes height,weight
+      Child Class: Student who has own method study and also can inherit the methods and properties from Person
+     Print the results
+
+
+// Parent Class
+class Person {
+    int height;
+    int weight;
+
+    // Constructor
+    Person(int h, int w) {
+        height = h;
+        weight = w;
+    }
+
+    // Methods
+    void walk() {
+
+        System.out.println("Person is walking");
+    }
+
+    void run() {
+
+        System.out.println("Person is running");
+    }
+
+    void sit() {
+        System.out.println("Person is sitting");
+    }
+
+    void showDetails() {
+        System.out.println("Height: " + height + " cm, Weight: " + weight + " kg");
+    }
+}
+
+// Child Class
+class Student extends Person {
+    String name;
+
+    // Constructor
+    Student(String n, int h, int w) {
+        super(h, w);  // call parent constructor
+        name = n;
+    }
+
+    // Own method
+    void study() {
+        System.out.println(name + " is studying");
+    }
+}
+
+// Main Class
+public class Main {
+    public static void main(String[] args) {
+        // Create Student object
+        Student s1 = new Student("Suvetha", 165, 55);
+
+        // Access inherited methods
+        s1.showDetails();
+        s1.walk();
+        s1.run();
+        s1.sit();
+
+        // Access child class method
+        s1.study();
+    }
+}
+
+
+
+
+
+
+
+
+
