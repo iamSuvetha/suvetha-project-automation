@@ -1,0 +1,67 @@
+1. Create an abstract class School with abstract method takeAttendance(String name) and concrete method ringBell() implement the same in a child class
+
+// Abstract class
+abstract class School {
+    // Abstract method (no body)
+    abstract void takeAttendance(String name);
+
+    // Concrete method (has body)
+    void ringBell() {
+        System.out.println("The school bell rings!");
+    }
+}
+
+// Child class implementing abstract class
+class MySchool extends School {
+    // Implementing the abstract method
+    @Override
+    void takeAttendance(String name) {
+        System.out.println("Marking attendance for: " + name);
+    }
+}
+
+// Main class to test
+public class Main {
+    public static void main(String[] args) {
+        MySchool school = new MySchool();
+
+        // Using implemented abstract method
+        school.takeAttendance("Suvetha");
+
+        // Using concrete method from abstract class
+        school.ringBell();
+    }
+}
+
+
+2. Create an Interface Vehicle with methods drive() , applyBrake() and implement the same in a class
+
+// Interface
+interface Vehicle {
+    void drive();       // abstract method
+    void applyBrake();  // abstract method
+}
+
+// Implementing class
+class Car implements Vehicle {
+    @Override
+    public void drive() {
+        System.out.println("The car is driving smoothly.");
+    }
+
+    @Override
+    public void applyBrake() {
+        System.out.println("The car has applied brakes.");
+    }
+}
+
+// Main class to test
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+
+        // Calling interface methods via implementation
+        myCar.drive();
+        myCar.applyBrake();
+    }
+}
